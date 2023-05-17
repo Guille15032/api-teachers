@@ -1,5 +1,5 @@
 import express from 'express';
-import confing from 'config';
+import confing from './config';
 import { TeacherRoutes } from 'app/routes/TeacherRoutes';
 
 export class Server {
