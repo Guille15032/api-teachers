@@ -1,6 +1,6 @@
-import { TeacherController } from "app/controllers/TeacherController";
+import { TeacherController } from "../controllers/TeacherController";
 import { Router } from "express";
-import { TeacherRepository } from "infra/repositories/TeacherRepository";
+import { TeacherRepository } from "../../infra/repositories/TeacherRepository";
 
 export class TeacherRoutes {
     private _router: Router;

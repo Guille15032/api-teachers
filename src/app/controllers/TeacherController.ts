@@ -1,5 +1,5 @@
 import { Teacher } from './../../domain/entities/Teacher';
-import { ITeacherRepository} from "domain/interfaces/ITeacherRepository";
+import { ITeacherRepository} from "./../../domain/interfaces/ITeacherRepository";
 import { Request, Response } from "express";
 
 export class TeacherController {

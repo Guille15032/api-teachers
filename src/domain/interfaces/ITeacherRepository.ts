@@ -1,4 +1,4 @@
-import { Teacher } from "domain/entities/Teacher";
+import { Teacher } from "../entities/Teacher";
 
  export interface ITeacherRepository {
     create(teacher: Teacher): Promise<Teacher>;

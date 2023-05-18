@@ -1,6 +1,6 @@
 import express from 'express';
-import confing from './config';
-import { TeacherRoutes } from 'app/routes/TeacherRoutes';
+import config from './config';
+import { TeacherRoutes } from './app/routes/TeacherRoutes';
 
 export class Server {
     private _app: express.Application;
@@ -13,7 +13,7 @@ export class Server {
     }
 
     private config(): void {
-        this._app.set('port', confing.port)
+        this._app.set('port', config.port)
     }
 
     private middlewares(): void{
@@ -27,8 +27,8 @@ export class Server {
     }
 
     public start(): void {
-        this._app.listen(confing.port, () => {
-            console.log(`Server corriendo por el puerto ${confing.port}`)
+        this._app.listen(config.port, () => {
+            console.log(`Server corriendo por el puerto ${config.port}`)
         })
     }
 }
