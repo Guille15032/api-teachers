@@ -1,6 +1,9 @@
 import express from 'express';
 import config from './config';
 import { TeacherRoutes } from './app/routes/TeacherRoutes';
+import cors from './app/middlewares/cors';
+import morgan from './app/middlewares/logger-http';
+import swaggerRouter from './app/middlewares/swagger/swagger';
 
 export class Server {
     private _app: express.Application;
@@ -19,6 +22,10 @@ export class Server {
     private middlewares(): void{
         this._app.use(express.json())
         this._app.use(express.urlencoded({extended: false}));
+        this._app.use(cors);
+        this._app.use(morgan);
+        this._app.use('/api-docs', swaggerRouter);
+
     }
 
     private routes(): void {
